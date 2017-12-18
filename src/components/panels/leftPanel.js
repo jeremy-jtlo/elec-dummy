@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
+import RaisedButton from 'material-ui/RaisedButton';
 
 export default class LeftPanel extends Component {
     render() {
         /* Skeleton for a left control panel */
+        /* TODO: Test other material-ui components later*/
         return(
             <div className="leftPanel">
-                <h1>This is the Left Panel</h1>
+                <RaisedButton label="Hurr Durr"/>
             </div>
         );
     }
