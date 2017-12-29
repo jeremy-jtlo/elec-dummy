@@ -9,7 +9,7 @@ export default class QueueView extends Component {
         
         return(
             <div className="queueView">
-                <Drawer anchor="right" type="permanent" style={{maxHeight: '100%', overflow: 'auto'}}>
+                <Drawer anchor="right" openSecondary="true" style={{maxHeight: '100%', overflow: 'auto'}}>
                     <List>
                         {dummyArray}
                     </List>
