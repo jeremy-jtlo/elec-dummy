@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Drawer from 'material-ui/Drawer';
 import {List, ListItem} from 'material-ui/List';
 
 export default class QueueView extends Component {
@@ -8,9 +9,11 @@ export default class QueueView extends Component {
         
         return(
             <div className="queueView">
-                <List style={{maxHeight: '100%', overflow: 'auto'}}>
-                    {dummyArray}
-                </List>
+                <Drawer anchor="right" type="permanent" style={{maxHeight: '100%', overflow: 'auto'}}>
+                    <List>
+                        {dummyArray}
+                    </List>
+                </Drawer>
             </div>
         );
     }
