@@ -8,13 +8,11 @@ export default class QueueView extends Component {
         var dummyArray = Array(15).fill(<ListItem>Dummy Song Data</ListItem>);
         
         return(
-            <div className="queueView">
-                <Drawer anchor="right" openSecondary="true" style={{maxHeight: '100%', overflow: 'auto'}}>
-                    <List>
-                        {dummyArray}
-                    </List>
-                </Drawer>
-            </div>
+            <Drawer openSecondary="true" className="drawerDiv col-3of12" xxxStyle={{width: "25%"}} >
+                <List>
+                    {dummyArray}
+                </List>
+            </Drawer>
         );
     }
 }

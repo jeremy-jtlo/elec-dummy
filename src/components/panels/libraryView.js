@@ -59,15 +59,13 @@ export default class LibraryView extends Component {
         ];
 
         return(
-            <div className="libraryView">
-                <GridList>
-                {tileData.map((tile) =>
-                    <GridTile key={tile.img} title={tile.title}>
-                        <img alt="Album Cover" src={tile.img}/>
-                    </GridTile>
-                )}
-                </GridList>
-            </div>
+            <GridList className="libraryView col-9of12">
+            {tileData.map((tile) =>
+                <GridTile key={tile.img} title={tile.title}>
+                    <img alt="Album Cover" src={tile.img}/>
+                </GridTile>
+            )}
+            </GridList>
         );
     }
 }
