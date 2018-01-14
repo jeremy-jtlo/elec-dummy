@@ -1,28 +1,13 @@
-.App {
-  text-align: center; }
+flex-container {
+  height: 98vh;
+  overflow: hidden; }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px; }
+.playQueue {
+  height: 100vh;
+  float: left;
+  overflow-y: scroll; }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white; }
-
-.App-title {
-  font-size: 1.5em; }
-
-.App-intro {
-  font-size: large; }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
-
-.drawerDiv {
-  max-height: '100%';
-  overflow: 'auto'; }
+.libraryView {
+  height: 100vh;
+  float: right;
+  overflow: scroll; }
