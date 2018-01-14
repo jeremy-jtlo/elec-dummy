@@ -1,3 +1,9 @@
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .col-2of12 {
   width: 16.66%;
 }

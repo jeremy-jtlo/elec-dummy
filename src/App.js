@@ -9,8 +9,10 @@ class App extends Component {
   render() {
     return (
       <MuiThemeProvider>
-        <LibraryView />
-        <QueueView />
+        <div className="flex-container">
+          <LibraryView />
+          <QueueView />
+        </div>
       </MuiThemeProvider>
     );
   }
