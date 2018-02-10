@@ -1,13 +1,29 @@
 import React, { Component } from 'react';
-import {GridList, GridTile} from 'material-ui/GridList';
+import {Tabs, Tab} from 'material-ui/Tabs';
+import AlbumView from '../views/albums';
 
 export default class LibraryView extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+          value: 'albums',
+        };
+      }
+
+    // For tab index switching
+    handleChange = (value) => {
+        this.setState({
+            value: value,
+        });
+    };
+
     render() {
         /* Skeleton for a main display */
         /* TODO: Test other material-ui components later*/
 
         /* Will hold onto grid items */
-        var tileData = [
+        var albums = [
             {
                 img: 'https://placeimg.com/300/300/animals/grayscale',
                 title: '80kidz'
@@ -59,13 +75,18 @@ export default class LibraryView extends Component {
         ];
 
         return(
-            <GridList className="libraryView col-9of12">
-            {tileData.map((tile) =>
-                <GridTile key={tile.img} title={tile.title}>
-                    <img alt="Album Cover" src={tile.img}/>
-                </GridTile>
-            )}
-            </GridList>
+            /* TODO: Place tabs in here  */
+            <Tabs
+            value={this.state.value}
+            onChange={this.handleChange}
+            >
+                <Tab label="Albums" value="albums">
+                <AlbumView tileData={albums}></AlbumView>
+                </Tab>
+                <Tab label="Artists" value="artists">
+                <h1>Testing Testing Testing</h1>
+                </Tab>
+            </Tabs>
         );
     }
 }
